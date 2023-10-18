@@ -4,9 +4,13 @@ import com.esprit.examen.entities.Produit;
 import com.esprit.examen.repositories.ProduitRepository;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
@@ -17,6 +21,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ProduitServiceImplTest {
     @InjectMocks
     private ProduitServiceImpl produitService;
@@ -80,6 +85,6 @@ public class ProduitServiceImplTest {
         Produit retrievedProduit = produitService.retrieveProduit(produitId);
 
         assertNotNull(retrievedProduit);
-        assertEquals(produit, new Produit());
+        assertEquals(produit, retrievedProduit);
     }
 }
