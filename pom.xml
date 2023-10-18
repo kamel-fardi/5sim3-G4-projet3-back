@@ -9,9 +9,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.examen</groupId>
-	<artifactId>tpAchatProject</artifactId>
+	<artifactId>5sim3-G4-porjet3</artifactId>
 	<version>1.0</version>
-	<name>tpAchatProject</name>
+	<name>5sim3-G4-porjet3</name>
 	<description>tpAchatProject</description>
 	<properties>
 		<java.version>1.8</java.version>
